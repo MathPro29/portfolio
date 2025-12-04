@@ -91,7 +91,7 @@ export default function Hero() {
           >
             <div className="w-64 h-64 flex items-center justify-center shadow-xl">
               <div className="text-center">
-                <img src="public/profile.jpg" alt="profile" className='rounded-full' />
+                <img src="../public/profile.jpg" alt="profile" className='rounded-full' />
               </div>
             </div>
           </motion.div>
