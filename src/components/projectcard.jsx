@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 /** sample data (คุณสามารถย้ายไปไฟล์ data แยกได้) */
 const sampleProjects = [
     {
-        title: "Comcamp24th website (อยู่ในระหว่างพัฒนา)",
+        title: "Comcamp24th website (On Production)",
         description:
             "Comcamp24th เว็บไซต์สำหรับการลงทะเบียนค่ายของสาขาวิชาวิทยาการคอมพิวเตอร์ มีหน้าต่างสำหรับผู้ใช้และผู้ดูแลระบบ โดยร่วมพัฒนาพร้อมกับทีม",
         tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
-        demo_link: ""
+        prod_link: "https://comcamp.csmju.com/"
     },
     {
         title: "Sontana+",
@@ -114,6 +114,17 @@ function ProjectCard({ p, i }) {
                             className="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-700/50 hover:bg-slate-600/50 text-white text-sm font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
                         >
                             Live Demo
+                            <ExternalLink className="w-4 h-4" />
+                        </a>
+                    )}
+                    {p?.prod_link && (
+                        <a
+                            href={p.prod_link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2.5 bg-slate-700/50 hover:bg-slate-600/50 text-white text-sm font-semibold rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
+                        >
+                            Live Production
                             <ExternalLink className="w-4 h-4" />
                         </a>
                     )}
